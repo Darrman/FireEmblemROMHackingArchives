@@ -1,0 +1,91 @@
+Release 1
+Playable chapters: 5
+
+Note that all portraits (with the exception of Maya's) are free to use and will be replaced with custom portraits in the final version
+- Janine by Miguel-Rojo
+- Colton by Zarg
+- Hank, Fausto, and Bratton by AmBrosiac
+- Arina by CapibaraInSpace
+- Ronnie by PkMnBro1
+- Rufus by feels
+- Johnny by Anon
+- Timidus by Toa
+- Glio by BatimaTheBat
+- Berus and Serpente by LaurentLacroix_46
+- Ben and Maya by Bwan
+- Anna by MeatOfJustice
+
+- Creed by RandomWizard
+
+- Stat screen by SaXor
+- Weapon and Item Icons by Zelix
+- Themis and Ultimatum Icons made by Peerless
+
+Animations, Map Sprites, etc:
+- Oracle by MrNight
+- Fighter by MageKnight404
+- Harbinger by Nuramon
+- Pale Flower by Mikey_Seregon, Marlon0024, Red Bean
+- Armor Knight by Team SALVAGED
+- Marshall by Leo_link, Nuramon, Iscaneus
+- Villager by Nuramon
+- Spartan by Vilkalizer, Pikmin1211
+- Villager (Map Sprite) by HyperGammeSpaces
+- Spartan (Map Sprite) by DerTheVaporeon
+- Fighter (Class Card) by flasuban
+- Marshall (Class Card) by Nuramon
+- Paladin (Class Card) by flasuban, RobertFPY
+- Female Cavalier (Map Sprite) by flasuban
+
+- Soldier by Alusq
+- Soldier (Map Sprite) by flasuban
+- Paladin (Map Sprite) by Pikmin1211
+- Pale Flower (Map Sprite) by StreetHero
+- Wyvern Rider by flasuban, eCut
+- Thief by GabrielKnight, Skitty
+- Splash spell animation by Alusq
+- Mercenary (Map Sprite) by flasuban
+- Priest by flasuban, Eldritch Abomination
+- Berserker by DerTheVaporeon, Aruka, Kenpuhu
+- Berserker (Map Sprite) by NYZgamer3
+- Great Knight by Nuramon
+- Great Knight (Map Sprite) by HyperGammaSpaces
+- Assassin (Map Sprite) by DerTheVaporeon
+- Hero (Map Sprite) by Nuramon
+- Assassin by Pikmin1211, DerTheVaporeon
+- Hero by Nuramon
+- Female Mercenary by Russell Clark
+- Male Mercenary by Team SALVAGED
+- Sage by St jack
+- Female Sage (Map Sprite) by Shtick, L95
+- Swordmaster (Male) by Greentea, RobertFPY
+- Cleric by BatimaTheBat
+- Lord by Teraspark
+- Archer by DerTheVaporeon
+- Male Sniper by Nuramon, Swain, Temp
+- Female Sniper by Nuramon, Swain, Temp, Wan
+- Thief (Map Sprite) by Rasdel
+- Wyvern Lord by Nuramon
+- Falcoknight by Greentea, RobertFPY
+- Falcoknight (Map Sprite) CamusZekeSirius, flasuban
+- Male druid by Eldritch Abomination, Shin19
+- Male druid (Map Sprite) by Rasdel
+- Male shaman by Temp, Shin19
+- Male shaman (Map Sprite) by Ash3wl, L95
+- Griffon Knight (Map Sprite) by Blue Druid
+- Griffon Knight by Ayr, Raspberry
+- Dark Knight by Pikmin1211, Jj09, DerTheVaporeon
+- Dark Knight (Map Sprite) Pikmin1211, Nuramon, DerTheVaporeon
+
+Music:
+- FE2 Land of Sorrow, FE2 Where the Wind Rustles, FE2 Boss Battle, FE5 Prep Theme by hypergammaspaces
+- Mars Lighthous, Fodlan Winds by A_Reliable_Chair
+- Saturos Battle Theme by Tristan_Hollow
+- My Home, Sweet Home by MeatOfJustice
+- FE2 Final Map Theme, Memories of Life, FE4 Another Assault by MrGreen3339
+- Treasure of the Rudras Earthbound by Pikmin1211
+- FE5 Attack by DerTheVaporeon
+- Dwelling of Doom, Knights of Lazeria, Endless Battle by Alusq
+- At the Bottom of Night, With Us by Sme
+
+- Calamity Bringer, Going My Way from FE7
