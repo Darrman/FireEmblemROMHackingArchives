@@ -9,3 +9,26 @@ General FEU Directory/SRPG
 
 #For stuff pulled from FEU for whatever reason and not to be in public
 Forbidden/
+
+#Big grouped zips
+FEU Backup 16-04-19.zip
+Ragefests/Ragefest 3 Archive.7z
+Ragefests/Ragefest 4 Archive.7z
+Ragefests/Ragefest 5 Archive.zip
+Ragefests/Ragefest Echoes Archive.7z
+
+#Individual games that are too big
+FEU Backup 16-04-19/FE9+/wasteland-windows - RedShark.zip
+General FEU Directory/FEXNA/Divinitas.rar
+General FEU Directory/FEXNA/FR Release 1.0.0.zip
+General FEU Directory/FE8/Fire Emblem Sacred Trilogy.zip
+General FEU Directory/Misc/absolution v0.1.9.1.zip
+General FEU Directory/Misc/Fire Emblem ANTHOLOGY - GAM2.exe
+General FEU Directory/Misc/The Raymond Chronicles.zip
+Ragefests/Ragefest 5 Archive/Ragefest V Submissions/Angel of Enragement [Lord Wolfram].7z
+Ragefests/Ragefest 5 Archive/Ragefest V Submissions/R_R_RPPSSERF_KA-SBRHDII.8FCPATOGBATFDFTDMCS [Rana].7z
+Ragefests/Ragefest 5 Archive/Ragefest V Submissions/Tactical Nonsense [DatBoiMatthew].7z
+Ragefests/Ragefest 5 Archive/Ragefest V Submissions/Tale of Purt 2_ Memelords Across Time [Purt]/Tale of Purt II - Memelords Across Time [Purt] Version 1.0.7z
+Ragefests/Ragefest 5 Archive/Ragefest V Submissions/Tale of Purt 2_ Memelords Across Time [Purt]/Tale of Purt II - Memelords Across Time [Purt] Version 1.1.7z
+#And to knock out some RF5 stragglers
+Ragefests/Ragefest 5 Archive/Ragefest V Submissions/*.7z
