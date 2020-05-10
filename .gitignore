@@ -1,5 +1,11 @@
-//NO ROMS
+#NO ROMS
 *.gba
 *.sfc
 *.nes
 *.nds
+
+#They're too big
+General FEU Directory/SRPG
+
+#For stuff pulled from FEU for whatever reason and not to be in public
+Forbidden/

@@ -1,0 +1,9 @@
+1.0.1 - Aug 22 2011
+- Added a new map to show some of the added features/how to do things that weren't explained yet
+-- Chest and Door event examples given, and events that activate x turns after a door opens
+- Reinforcements can be made bosses/can be set to drop their equipment; call $game_map.add_boss or $game_map.add_drop before your add_unit script call
+- Talk events work more properly now, and can run full event controls; Test Map 2 has an example of how to use one for recruitment
+- The main player character can be set/works with autocursor and the Data screen. Use $game_system.allied_leader_id = <actor_id> to set the id manually, otherwise it will use the first found actor in FE_Confid::MAIN_CHARACTER
+
+1.0.0 - Jul 28 2011
+-Initial Release

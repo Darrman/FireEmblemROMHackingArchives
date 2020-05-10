@@ -1,0 +1,5 @@
+When playing this hack, please do not "suspend" or "resume" the game, as it may reset certain event IDs and cause glitchy things to happen. If you must suspend the game, please use savestates.
+
+Cedar has tried many times to fix this glitch but could never figure out how. (Cedar is still a rookie hacker after all.) Many apologies for any inconveniences this may cause...
+
+Thanks again for playing the hack!

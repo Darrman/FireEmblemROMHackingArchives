@@ -1,0 +1,23 @@
+Patching Instructions
+-----------------------
+
+TYPE 1 UPS PATCH
+-----------------
+
+Note: THE PATCH IS A .UPS TYPE PATCH. YOU MUST USE NUPS TO PATCH IT.
+
+NUPS can be found here- http://www.feshrine.net/hacking/patchers.html
+
+1. Download and extract all files. If you're reading this, you have most likely done so already.
+
+2. Open NUPS.
+
+3. Select the original ROM. It is a Fire Emblem 7 (U) 1235 ROM. Do not ask where to get this.
+
+4. Select the patch "FE - Prisoner of Darkness.ups" (or whatever is close to that in name, depending on the version--be sure to select the one with [HARD] if you want hard mode) using NUPS.
+
+5. Apply the patch. If it doesn't work, re-attempt by making NUPS notify you if the file is invalid. There is a little section for this in the bottom left; hit "notify".
+
+6. Get your ROM and smack it into Visual Boy Advance, preferably v1.8.0 beta, but v1.7.2. should work. Google can help you find this.
+
+7. Enjoy the game!

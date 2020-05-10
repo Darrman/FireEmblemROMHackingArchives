@@ -1,0 +1,35 @@
+CREDITS AND SPECIAL THANKS
+
+So...As much as I'd like to take all the credit for creating this hack, I would never had pulled it off if it weren't for the support and inspiration of many awesome people (most of whom are listed below). In one way or another, they all helped make "Matthew's Nightmare" a true success, and I am indebted to them for their awesomeness.
+
+I would first like to thank MarkyJoe1990 for hosting the 
+ragefest contest... I really did enjoy pushing the limits of my hacking knowledge to create the most sadistic, rage-inducing chapter I could think of... And overall, I'm delighted how it turned out. Frankly, without this contest, I would have never thought of making such a sadistic hack...so thank you for doing this, MarkyJoe!
+
+I would also like to sincerely thank Dess, Stefan, PhoenixTears, and Kiroshima for the use of their spliced/custom mugs and/or custom animations. Specific credits are as follows:
+
+Dess - Budgie mug, budgie animation, Moulder animation, Ezra mug
+Stefan - Stefan mug
+PhoenixTears -Phoenix mug
+Kiroshima -Kiro mug
+
+All of these sprites were actually made for a zombie hack that the Emblem Brigade is developing at the moment...but I inserted them in "Matthew's Nightmare" for the lulz (as well as to promote TEB, of course). Obviously, I could have never made these sprites on my own, since I fail at spriting. And the spliced mugs I did end up making (the generic pegasus rider and Mr.Moulder) took a long time. Believe me, my hack would have been completely devoid of custom graphics without the help of my fellow spriters. They are awesome. Applaud their awesomeness.
+
+Thirdly, I am extremely grateful to all my playtesters: Ezra, Stefan, Masterplan201, Ephraim222, and soadfa. Thank you so much for being brave souls and playtesting this evil monster of a chapter! I sincerely applaud their epic patience and wonderful feedback. If not for them, my hack would probably still be jacked up with bugs and glitches...and that would really suck.
+
+As a side note, it took me around 5 restarts to beat the final version of the hack...And I knew all the traps from the getgo.
+Only two of my playtesters (Ezra and Ephraim222) reported to have beaten the hack savestateless, and neither could beat the hack under 20 restarts...Man, that's a lot of patience right there. Personally, I think they're deserving of major props. PROPS!
+
+
+Fourthly, I'd like to thank the TEB community at large. All the members were extremely supportive of my hack and gave awesome tips on how to make the chapter as sadistic as possible. Many ideas and designs in the hack were based heavily off their suggestions; and their encouragement drove me forward to finally finish the hack after many setbacks and glitchy event happenings. TEB, thank you again for your support. I would have not completed the hack by the deadline without all your help.
+
+Fifthly, I thank everyone who made utilities and/or wrote tutorials that allowed me to hack in the first place...more specifically, I'd like to thank Arch for his epic event hacking tutorial/Nightmare modules; Nintenlord for his Event Assembler/MAR Array inserter/Nightmare modules, Xeld for his FEditor/Nightmare modules, Blazer for his Ultimate FE Tutorial/Nightmare modules, MarkyJoe1990 for his map insertion tutorial, SpyroDi, IcyToast, and GK for their Nightmare modules, and all the hard-working hackers out there that I have not named who continue to make hacking easier for the rest of us... Thank you, thank you, thank you!  I couldn't have done any of this without your sweet hacking tutorials and utilities.
+
+Finally, I thank you, the player, for playing this hack. Really, I hope you enjoyed it despite all the rage-inducing evilness. I tried to make the chapter as entertaining as possible...Hopefully you had fun, even after your 20th attempt to beat the freaking chapter. Thank you so much for your patience and for making this hack a success. :)
+
+(By the way, on the off chance that you were successful in beating the hack, BLIND, with less than 20 restarts, you have earned my undying respect and awe.) 
+
+Oh, and Cedar does not in any way own Fire Emblem, Nintendo, Intelligence Systems, or Inception (though the hack does parody it a bit, if you hadn't noticed already). Yeah...Fan-made hacks are fun.
+
+PS. If you have the time, please shoot me a quick PM or email me (cedarnyx@gmail.com) with your comments about the hack. I'd love to hear what you, personally, thought of it. This is my first released patch ever, so feedback is always, always, always appreciated. :)
+
+Thanks again~
