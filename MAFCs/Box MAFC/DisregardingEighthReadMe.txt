@@ -106,3 +106,10 @@ Aura
 
 Excalibur
 12 Might, 80 Hit,  0 Crit,  7 Weight, 1-1 Range, 5 uses
+
+
+
+
+
+
+
