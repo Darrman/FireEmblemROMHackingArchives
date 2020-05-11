@@ -1,0 +1,162 @@
+V0
+- Maps inserted
+- FE8 Palettes inserted
+- Character base stats changed
+- Basic outlines of Pre-Gameplay and Gameplay
+
+
+V0.10
+- Tweaking Trial1 to take more hits and require hammer (Knight -> General)
+
+V0.11
+- Attemped to "create" the mechanic of Galeforce
+- Inserted initial Wyvern Rider reinforcements
+  - Tweaked stats so two can kill FighterGuy
+  - Changed so a Javelin Wyvern spawns for three turns after the initial two
+- Nerfed Wyvern Rider move to 6 and Paladins can no longer use axes
+- Inserted initial Bandits
+  - Tweaked stats to be a threat
+
+V0.15
+- Longbow Village only gives you the longbow if ArcherGuy visits
+- Made Ballistae Village event
+  - TheBoss1 is now replaced by TheBoss2 after the scene following the village
+
+
+V0.20
+- Aesthetic changes to TheBoss1; more appropriate stats and weapon ranks
+- Changed Longbow Village to a Wyrmslayer Village; anyone can enter to get it
+  - Galdor now starts with an Iron Bow and a Longbow instead of an Iron Bow and Vulnerary
+- Another bandit at Turn 1, which should head for the Ballistae Village
+- Zeroed out the player character growths for testing
+- Hadvar can no longer use swords
+- Nerfed Axereaver hit and the Wyvern Riders' skill
+
+V0.23
+- Added enemies
+- Gave the player characters a total of 400% growth (4 100%s)
+
+V0.25
+- Bandit that goes for the Ballistae Village is now a reinforcement that comes on Turn 3
+- Removed a bandit from [0,13]
+- Trial 2 is now a Generic Fighter with Pursue AI
+- Moved the monk four tiles to the right
+- New bandit reinforcement
+- New cavalier reinforcements
+- Buffed ShamanGuy's skl and def
+
+
+V0.3
+- Nerfed PaladinGuy's lck
+- Nerfed TheBoss2's spd and lck
+- Removed cavalier reinforcement by Javelin Wyvern
+- Changed an Archer into a Shaman
+- Lowered FighterGuy's level to 5
+- Gave ShamanGuy a Carreau tome
+- Raised GenericMerc str, lowered spd
+
+V0.35
+- Working ASM...!
+  - Trial 2 now has buffed stats every two turns until his fifth powerup
+    - Lowered base stats
+  - ArcherGuy has Galeforce, but doesn't need to kill an enemy to activate it
+  - CavalierGuy has Go Again, which lets him...go again, but only with 2 mov
+- Changed map to protect the units representing the skills (Go Again and Galeforce)
+- Changed events so Go Again and Galeforce work
+
+
+
+V0.60
+- CavalierGuy is now in his own cavalier class, so Go Again works properly
+- Nerfed PaladinGuy's hp and def
+  - Lowered level to 1
+- Buffed FighterGuy's hp and def
+- Buffed CavalierGuy's hp and spd
+- Buffed all of MageGirl's stats
+- Buffed all bows by +1 mt and +10 accuracy
+- Added a few more longbow archers
+- Got rid of unneccessary stuff in the Events due to rethinking the skill units
+
+V0.63
+- Fixed losing the person rescued by ArcherGuy or CavalierGuy after activating their skill :D
+- CavalierGuy's mov is now 4 on the second turn
+- Fixed Trial2's powerup effect playing even after he died
+- Fixed CavalierGuy not taking extra damage from Halberd
+- Got rid of the World Map in Gameplay Chapter
+
+
+V0.70
+- Changed class descriptions
+- Changed item descriptions
+- Changed unit names and repointed some generics
+- Changed unit descriptions and repointed some generics
+- Changed Denmer into Hector's unpromoted class
+- Changed playable characters' names and updated events and definitions to match
+- Removed supports
+- Lowered Trial 2's res
+
+V0.74
+- Changed text in both chapters
+- Buffed Alexander's hp
+- Buffed Generic Wyvern's str
+- Lowered Generic Mage's res
+- Fixed screeching bug when BallstaeVsBoss's condition is true (Event ID 0x50 caused the screeching)
+
+V0.79
+- Inserted Brendor's Set Gold ASM
+- Altered the beginning text in Pre-Gameplay
+- Changed more names and descriptions
+- ChooseGuy is now ChooseGal
+- Made reinforcements that show up if the player is too slow more threatening
+
+
+V0.80
+- Fixed Carreau making Zain's hp value go insane
+- Changed chapter names
+- Patch released!
+  - Two versions: as it is right now, and one that buffs weapon accuracy by 100% and lowers everyone's skill to 0
+
+V0.82
+- Fixed "Denmer" going offscreen in Hint 3's text
+- Fixed Halberd Fighter's palette
+- Clarified Galdor's Galeforce
+- Added death quotes
+- Added battle conversations for all of the "bosses"
+- Fixed bug where boss music played against Halberd Fighter
+
+V0.85
+- Skill Units disappear on Enemy Phase
+- Skill Units now are at the middle of the map on cliffs
+- Changed Skill Units base stats
+- Fixed bug with reseting map changes if Graphics House was visited (?)
+- Made the Trial 2 Powerup more convinent for use, and reinserted due to map stuff overriding the old ASM
+
+V0.89
+- Repointed the "Chapter 2" chapter name and goal text to Chapter 1 (Gameplay).
+- Fixed Terrible Graphics's name, and several goal text.
+
+
+V0.90
+- Removed Event IDs and Conditional IDs that didn't need to be used for ASM Skills
+- Finished Post-Gameplay text
+- Edited Post-Gameplay chapter name and goal text
+- Removed Post-Gameplay World Map and Beginning Music, and changed to Fade to Black
+
+V0.95
+- Messed with weapon costs
+- Changed promotion bonuses
+- Made Blade Lord more or less the same as Paladin
+- Edited Hero Crest to promote Denmer and Knight Crest to promote Alexander
+
+V0.96
+- Changed Blade Lord's Another Pointer in Map Sprite Module
+- Changed item descriptions and class descriptions for those accessible in Post-Gameplay
+- Lowered the Warrior bosses' CON and raised Great Lord's CON
+- Inserted FE8 Town Tileset
+- Fixed Halberd doubling its might in the display
+- Gave Boss battle convos their own Event IDs (previously were using Village Destroyed Event IDs)
+- Moved the Archer by Trial 2 one space to the left
+
+V1.0
+- Patch released!
+  - Both versions are released like last time

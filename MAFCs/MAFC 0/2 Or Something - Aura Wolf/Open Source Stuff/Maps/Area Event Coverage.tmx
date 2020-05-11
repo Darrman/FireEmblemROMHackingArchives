@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="17" height="25" tilewidth="16" tileheight="16">
+ <tileset firstgid="1" name="01000203" tilewidth="16" tileheight="16">
+  <image source="../../Tilesets/FE8/01000203.png" width="512" height="512"/>
+ </tileset>
+ <layer name="Main" width="17" height="25">
+  <properties>
+   <property name="Main" value=""/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjZGBgYBzFoxgHzmBmYMgE4iwgZmLAxBXMhDEQwfGoGfQx4wZQQpQJPx5pZhxkwI5h6ZsSMySgmBpmqCDlO0rMuArFQ90MAOKoUSY=
+  </data>
+ </layer>
+ <layer name="Wyrmslayer Village Destroyed" width="17" height="25" visible="0">
+  <properties>
+   <property name="Height" value="3"/>
+   <property name="ID" value="1"/>
+   <property name="Width" value="3"/>
+   <property name="X" value="1"/>
+   <property name="Y" value="19"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIJRAAIdzAwMnUDcxUy+GSuAelcC8SoKzDgB1HsSiE9RYMZwAQCragYN
+  </data>
+ </layer>
+ <layer name="Wyrmslayer Village Closes" width="17" height="25" visible="0">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="2"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="2"/>
+   <property name="Y" value="21"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIJRMNiA4kA7YJAAACisACI=
+  </data>
+ </layer>
+ <layer name="Hammer Village Destroyed" width="17" height="25" visible="0">
+  <properties>
+   <property name="Height" value="3"/>
+   <property name="ID" value="3"/>
+   <property name="Width" value="3"/>
+   <property name="X" value="14"/>
+   <property name="Y" value="16"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjAL6gg5mBoZOIO5iJt+MFUC9K4F4FQVmnADqPQnEpygwYxTQFgAAQsYGDQ==
+  </data>
+ </layer>
+ <layer name="Hammer Village Closes" width="17" height="25" visible="0">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="4"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="15"/>
+   <property name="Y" value="18"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIKRCxQH2gGjAC8AADxEACI=
+  </data>
+ </layer>
+ <layer name="Ballistae Village Destroyed" width="17" height="25" visible="0">
+  <properties>
+   <property name="Height" value="3"/>
+   <property name="ID" value="5"/>
+   <property name="Width" value="3"/>
+   <property name="X" value="0"/>
+   <property name="Y" value="6"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFgxF0MDMwdAJxFzP5ZqwA6l0JxKsoMOMEUO9JID5FgRmjYBSMglFALgAApkUGDQ==
+  </data>
+ </layer>
+ <layer name="Ballistae Village Closes" width="17" height="25" visible="0">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="6"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="1"/>
+   <property name="Y" value="8"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFowA/UBxoB4yCUTAKRiwAAJskACI=
+  </data>
+ </layer>
+ <layer name="Arena Disappears" width="17" height="25" visible="0">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="7"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="8"/>
+   <property name="Y" value="14"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUDDfQOtAOGAWjgEoAAHqvAIY=
+  </data>
+ </layer>
+</map>

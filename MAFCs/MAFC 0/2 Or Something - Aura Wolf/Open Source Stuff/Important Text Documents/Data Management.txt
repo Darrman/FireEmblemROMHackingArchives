@@ -1,0 +1,97 @@
+Pre-Gameplay Events
+0D00000
+
+Gameplay Events
+0D01000
+
+Post-Gameplay Events
+0D03000
+
+Post-Gameplay Vendor Data
+0D04000
+
+Pre-Gameplay Map
+1000000
+
+FE8 Castle Tileset
+1000160-10079AF
+
+1000160		Object Type
+10063E0		Palette
+1006530		Tile Configuration
+
+FE8 Overworld Tileset
+10079B0-1010B2F
+
+10079B0		Object Type
+100F140		Tile Configuration
+10109E0		Palette
+
+Gameplay Map
+1010B30
+
+Gameplay Tile Changes
+10111C0
+
+Terrible Graphics Map
+1011250
+
+Terrible Graphics Tile Changes
+101139C
+
+Trial 2 Boost ASM
+10115D0
+
+Alexander's Go Again ASM
+1011660-101169F
+1011660		Go Again
+1011690		Reset
+
+Galdor's Galeforce ASM
+10116A0
+
+Horse Effectiveness
+10116C0
+
+Text
+10116D0
+
+Post-Gameplay Map
+1012F20
+
+Brendor's Starting Gold ASM
+1013120
+
+Less Than 5000 ASM
+1013140
+
+Less Than 15000 ASM
+1013160
+
+Less Than 30000 ASM
+1013180
+
+Secret Shop Location Fee
+10131A0
+
+Pure Water Fee
+10131C0
+
+More Text Stuff
+1014620
+
+Free Space
+1015070
+
+More Text Stuff
+1015100
+
+FE8 Town Tileset
+10169A0-101F2CF
+
+10169A0		Object Type
+101DC20		Tile Configuration
+101F180		Palette
+
+FE8 Town Animation
+101F2D0

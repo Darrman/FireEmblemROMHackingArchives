@@ -1,0 +1,57 @@
+Any other ID not listed is not being used
+
+Event IDs
+
+Location Events
+0x3			Seize
+0x5			House has been visited already
+0x6			Wyrmslayer Village
+0x7			Hammer Village
+0x8			Ballista Village
+
+Area Events
+0x9			Wyrmslayer Village destroyed
+0xA			Hammer Village destroyed
+0xB			Ballista Village destroyed
+
+Boss Convos
+0xC			Trial 1
+0xD			Trial 2
+0xE			The Boss 1
+
+Deaths
+0x10		Trial2 has died
+
+Keeping Track Of What Has Happened This Turn
+0x14		Alexander has used Go Again
+0x16		Galdor has used Galeforce
+
+Turn Events
+0x30		BallistaVsBoss
+
+
+Other
+0x65		Game Over
+
+
+
+Conditional IDs
+
+House
+0x1			If the house has been visited already
+0x2			If the house is being visited for the first time
+
+Trial 2
+0xF			If Trial2 is alive
+
+Ballistae Village
+0x20		If the Ballistae Village was visited
+0x21		If the Ballistae Village was not visited
+
+ASM Skills
+0x26		If Alexander just moved
+0x27		If Alexander has not used Go Again
+0x29		If Galdor just moved
+0x2A		If Galdor has not used Galeforce
+0x2C		If GoAgainUnit just moved
+0x2D		If GaleforceUnit just moved

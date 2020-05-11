@@ -1,0 +1,513 @@
+//Made by markyjoe1990 of Youtube
+//Modified by Nintenlord
+
+#define DISABLE_TUTORIALS
+#include EAstdlib.event
+#include Definitions.txt
+
+EventPointerTable(0x09,Pointers)
+
+
+ORG 0xD01000
+Pointers:
+POIN Turn_events 
+POIN Character_events 
+POIN Location_events 
+POIN Misc_events
+POIN TrapData TrapData
+POIN Bad Bad Bad Bad
+POIN Good Good Good Good
+POIN Opening_event Ending_event
+
+Bad:
+UNIT TheBoss1 Warrior 0x0 Level(10,Enemy,False) [8,2] [8,2] /*[8,3] [8,3]*/ [Tomahawk,Longbow] Guard
+UNIT Trial2 Monk TheBoss1 Level(12,Enemy,False) [11,5] [11,5] [Shine] AttackInRange
+UNIT Trial1 General TheBoss1 Level(2,Enemy,False) [9,21] [9,21] [Spear,PureWater] Guard
+UNIT Bandit Brigand TheBoss1 Level(4,Enemy,False) [1,17] [1,17] [IronAxe] DestroyVillages
+UNIT Bandit Brigand TheBoss1 Level(4,Enemy,False) [14,22] [14,22] [IronAxe] DestroyVillages
+UNIT Bandit Brigand TheBoss1 Level(4,Enemy,False) [16,23] [16,23] [IronAxe] DestroyVillages
+UNIT HalberdFigh Fighter TheBoss1 Level(7,Enemy,False) [8,8] [8,8] [Halberd,Elixir] PursueWithoutHeed
+UNIT GenericMerc Mercenary TheBoss1 Level(4,Enemy,False) [7,17] [7,17] [IronSword] AttackInRange
+UNIT GenericMerc Mercenary TheBoss1 Level(4,Enemy,False) [7,13] [7,13] [IronSword] PursueWithoutHeed
+UNIT GenericMerc Mercenary TheBoss1 Level(5,Enemy,False) [11,1] [11,1] [IronSword] PursueWithoutHeed
+UNIT GenericArch Archer TheBoss1 Level(6,Enemy,False) [0,10] [0,10] [Longbow] AttackInRange
+UNIT GenericArch Archer TheBoss1 Level(6,Enemy,False) [10,4] [10,4] [Longbow] AttackInRange
+UNIT GenericArch Archer TheBoss1 Level(5,Enemy,False) [8,7] [8,7] [Longbow] AttackInRange
+UNIT GenericArch Archer TheBoss1 Level(5,Enemy,False) [2,15] [2,15] [Longbow] AttackInRange
+UNIT GenericSold Soldier TheBoss1 Level(4,Enemy,False) [9,14] [9,14] [IronLance] PursueWithoutHeed
+UNIT GenericSold Soldier TheBoss1 Level(4,Enemy,False) [11,14] [11,14] [IronLance] PursueWithoutHeed
+UNIT GenericSold Soldier TheBoss1 Level(5,Enemy,False) [7,9] [7,9] [IronLance] AttackInRange
+UNIT GenericSold Soldier TheBoss1 Level(5,Enemy,False) [9,9] [9,9] [IronLance] AttackInRange
+UNIT GenericSold Soldier TheBoss1 Level(5,Enemy,False) [13,5] [13,5] [IronLance] PursueWithoutHeed
+UNIT GenericSold Soldier TheBoss1 Level(5,Enemy,False) [14,5] [14,5] [Javelin] PursueWithoutHeed
+UNIT GenericMage Mage TheBoss1 Level(6,Enemy,False) [5,2] [5,2] [Thunder] PursueWithoutHeed
+UNIT GenericMage Mage TheBoss1 Level(4,Enemy,False) [3,13] [3,13] [Fire] PursueWithoutHeed
+// UNIT Bandit Brigand TheBoss1 Level(5,Enemy,False) [1,8] [1,8] [IronAxe] DestroyVillages
+UNIT
+
+Good:
+UNIT Denmer HectorLord Denmer Level(5,Ally,False) [9,23] [9,23] /*[8,2] [8,2]*/ [IronAxe,HandAxe,Vulnerary] NoAI
+UNIT Lavina Mage_F Denmer Level(4,Ally,False) [10,24] [10,24] [Fire,Vulnerary] NoAI
+UNIT Zain Shaman Denmer Level(6,Ally,False) [8,24] [8,24] [Carreau,Flux,Vulnerary] NoAI
+UNIT Galdor Archer Denmer Level(5,Ally,False) [7,24] [7,24] [IronBow,Longbow] NoAI
+UNIT Hadvar Paladin Denmer Level(1,Ally,False) /*[1,8] [1,8]*/ [8,23] [8,23] [SteelLance,Javelin,Vulnerary] NoAI
+UNIT Alexander SwordCavalier Denmer Level(5,Ally,False) [6,24] [6,24] [IronSword,Vulnerary] NoAI
+// UNIT Pent Sage Denmer Level(20,Ally,False) [8,6] [8,6] [Excalibur] NoAI
+// UNIT Marcus Paladin Denmer Level(20,Ally,False) [1,9] [1,9] [Spear,Spear] NoAI
+UNIT
+
+SkillUnits:
+UNIT GoAgainUnit Prince_Tactician Denmer Level(1,NPC,False) [5,10] [5,10] [0x00] Guard
+UNIT GaleforceUnit Prince_Tactician Denmer Level(1,NPC,False) [4,11] [4,11] [0x00] Guard
+UNIT
+
+WyvernSound:
+UNIT GenericWyvern WyvernKnight TheBoss1 Level(6,Enemy,False) [0,0] [0,0] [Javelin] PursueWithoutHeed
+UNIT
+
+WyvernReinforcements:
+UNIT GenericWyvern WyvernKnight TheBoss1 Level(6,Enemy,False) [8,24] [8,24] [Axereaver] PursueWithoutHeed
+UNIT GenericWyvern WyvernKnight TheBoss1 Level(6,Enemy,False) [9,24] [9,24] [Axereaver] PursueWithoutHeed
+UNIT
+
+LoneWyvernReinforcement:
+UNIT GenericWyvern WyvernKnight TheBoss1 Level(6,Enemy,False) [8,24] [8,24] [Javelin] PursueWithoutHeed
+UNIT
+
+FootStepSound:
+UNIT GenericFigh Fighter TheBoss1 Level(5,Enemy,False) [0,0] [0,0] [IronAxe] PursueWithoutHeed
+UNIT
+
+LoneFortReinforcement:
+UNIT GenericFigh Fighter TheBoss1 Level(5,Enemy,False) [7,5] [7,5] [IronAxe] PursueWithoutHeed
+UNIT
+
+LoneBanditReinforcement:
+UNIT Bandit Brigand TheBoss1 Level(5,Enemy,False) [16,7] [16,7] [IronAxe] DestroyVillages
+UNIT
+
+LoneBanditReinforcement2:
+UNIT Bandit Brigand TheBoss1 Level(5,Enemy,False) [6,0] [6,0] [IronAxe] DestroyVillages
+UNIT
+
+HorseSound:
+UNIT GenericCava Cavalier TheBoss1 Level(4,Enemy,False) [0,0] [0,0] [IronLance] NoAI
+UNIT
+
+PaladinReinforcements:
+UNIT GenericPala Paladin TheBoss1 Level(15,Enemy,True) [16,5] [16,5] [BraveLance,Spear,Elixir] PursueWithoutHeed
+UNIT GenericPala Paladin TheBoss1 Level(15,Enemy,True) [16,6] [16,6] [BraveLance,Spear,Elixir] PursueWithoutHeed
+UNIT GenericPala Paladin TheBoss1 Level(15,Enemy,True) [16,7] [16,7] [BraveLance,Spear,Elixir] PursueWithoutHeed
+UNIT GenericPala Paladin TheBoss1 Level(15,Enemy,True) [16,8] [16,8] [BraveLance,Spear,Elixir] PursueWithoutHeed
+UNIT GenericPala Paladin TheBoss1 Level(15,Enemy,True) [16,9] [16,9] [BraveLance,Spear,Elixir] PursueWithoutHeed
+UNIT
+
+NewBoss:
+UNIT TheBoss2 Warrior 0x0 Level(3,Enemy,False) [8,2] [8,2] [Longbow,Tomahawk] Guard
+UNIT
+
+BallistaSniper:
+UNIT BallistaGuy Sniper 0x0 Level(1,NPC,False) [1,5] [1,5] [SteelBow] Guard
+UNIT
+
+Turn_events:
+OpeningTurnEvent(Opening_event)
+TurnEventEnemy(0x0,HideSkills,1,99)
+TurnEventPlayer(0x30,BallistaVsBoss,2,99)
+TurnEventPlayer(0x0,Reset,2,99)
+TurnEventPlayer(0x0,ReinforcementWarning,2)
+TurnEventPlayer(0x0,Powerup1,3)
+TurnEventPlayer(0x0,BanditSpawn,3)
+TurnEventPlayer(0x0,WyvernsSpawn,4)
+TurnEventPlayer(0x0,Powerup2,5)
+TurnEventPlayer(0x0,FortWarning,5)
+TurnEventPlayer(0x0,ReinforcementsArrive,6,2)
+TurnEventPlayer(0x0,BanditWarning,6)
+TurnEventPlayer(0x0,Powerup3,7)
+TurnEventPlayer(0x0,BanditSpawn2,7)
+TurnEventPlayer(0x0,Powerup4,9)
+TurnEventPlayer(0x0,Powerup5,11)
+TurnEventPlayer(0x0,PaladinWarning,12)
+TurnEventPlayer(0x0,PaladinSpawn,13,14)
+END_MAIN
+
+Character_events:
+END_MAIN
+
+Location_events:
+Seize(0x3,Ending_event,8,2)
+House(0x0,GraphicsHouse,13,23)
+Village(0x6,WyrmslayerVillage,2,21) //Not vital, but useful
+Village(0x7,HammerVillage,15,18) //This village shouldn't be visited
+Village(0x8,BallistaVillage,1,8) //Damages the boss and lowers other stats
+END_MAIN
+
+Misc_events:
+AREA 0x0 CheckForTurnSpent [0,0] [16,7] //red
+AREA 0x0 CheckForTurnSpent [3,8] [7,24] //opened chest
+AREA 0x0 CheckForTurnSpent [8,8] [16,13] //castle middle
+AREA 0x0 CheckForTurnSpent [0,9] [2,20] //horizontal bridge
+AREA 0x0 CheckForTurnSpent [9,14] [16,17] //river
+AREA 0x0 CheckForTurnSpent [8,14] [8,24] //ruins
+AREA 0x0 CheckForTurnSpent [0,21] [0,24] //snag
+AREA 0x0 CheckForTurnSpent [1,22] [2,24] //ocean
+AREA 0x0 CheckForTurnSpent [9,18] [14,24] //black
+AREA 0x0 CheckForTurnSpent [15,19] [16,24] //ocean cliff
+AREA 0x0 CheckForWyrmslayerBandit [1,21] [2,21]
+AREA 0x0 CheckForHammerBandit [15,18] [16,18]
+AREA 0x0 CheckForBallistaBandit [0,8] [2,8]
+CauseGameOverIfLordDies
+END_MAIN
+
+Opening_event:
+CMOF
+CameraLocation(8,19,10)
+LoadMain
+//LoadGroup(PaladinReinforcements)
+LoadGroup(SkillUnits)
+CMON
+OOBB
+ASMC 0x1011691
+ENDA
+
+GraphicsHouse:
+MUSI
+//If this house was already visited
+IFET 0x1 0x5
+ScrollText(0x806) //The door is locked...
+MUNO
+ELSE 0x2
+ENIF 0x1
+//If this house is being visited for the first time
+HIDEMAP
+FADI 10
+LOMA Ch2 [9,19]
+//If the Wyrmslayer Village was visited
+IFET 0x9 0x6
+MAC1 0x02 0x00
+ENIF 0x9
+//If the Wyrmslayer Village was destroyed
+IFET 0xA 0x9
+MAC1 0x01 0x00
+ENIF 0xA
+//If the Hammer Village was visited
+IFET 0xB 0x7
+MAC1 0x04 0x00
+ENIF 0xB
+//If the Hammer Village was destroyed
+IFET 0xC 0xA
+MAC1 0x03 0x00
+ENIF 0xC
+//If the Ballista Village was visited
+IFET 0xD 0x8
+MAC1 0x06 0x00
+ENIF 0xD
+//If the Ballista Village was destroyed
+IFET 0xE 0xB
+MAC1 0x05 0x00
+ENIF 0xE
+BACG Housewithfireplace
+FADU 10
+SHOWMAP
+Text(0x805) //Doesn't nature look beautiful?
+MUNO
+ENUT 0x5
+ENIF 0x2
+ENDA
+
+CheckForWyrmslayerBandit:
+//If a bandit steps on this tile, then trigger the event ID
+IFCA 0x0 0x3 Bandit
+ENUT 0x9
+ELSE 0x4
+ENIF 0x3
+//If a different unit steps on this tile, check if it's Galdor or Alexander
+CALL CheckForTurnSpent
+ENIF 0x4
+ENDA
+
+CheckForHammerBandit:
+//If a bandit steps on this tile, check if it's Galdor or Alexander
+IFCA 0x0 0x5 Bandit
+ENUT 0xA
+ELSE 0x6
+ENIF 0x5
+//If a different unit steps on this tile, check if it's Galdor or Alexander
+CALL CheckForTurnSpent
+ENIF 0x6
+ENDA
+
+CheckForBallistaBandit:
+//If a bandit steps on this tile, then trigger the event ID
+IFCA 0x0 0x7 Bandit
+ENUT 0xB
+ELSE 0x8
+ENIF 0x7
+//If a different unit steps on this tile, check if it's Galdor or Alexander
+CALL CheckForTurnSpent
+ENIF 0x8
+ENDA
+
+CheckForTurnSpent:
+IFCA 0x0 0x26 Alexander
+IFEF /*IFET*/ 0x27 0x14  //If Alexander has used GoAgain, then he can't move a third time
+//ENUT 0x15
+//ELSE 0x28
+//ENIF 0x27
+ENUT 0x14
+TurnAlly(GoAgainUnit)
+ENIF 0x27 /*0x28*/
+ENIF 0x26
+IFCA 0x0 0x29 Galdor
+/*IFET*/ IFEF 0x2A 0x16 //If Galdor has used Galeforce, then he can't move a third time
+//ENUT 0x17
+//ELSE 0x2B
+//ENIF 0x2A
+ENUT 0x16
+TurnAlly(GaleforceUnit)
+ENIF 0x2A /*0x2B*/
+ENIF 0x29
+IFCA 0x0 0x2C GoAgainUnit
+JUMP GoAgainActivation
+ENIF 0x2C
+IFCA 0x0 0x2D GaleforceUnit
+JUMP GaleforceActivation
+ENIF 0x2D
+ENDA
+
+GoAgainActivation:
+TurnNPC(GoAgainUnit)
+SOUN Horsetrot
+STAL 20
+SOUN Horsetrot
+STAL 20
+ASMC 0x1011661
+ENDA
+
+GaleforceActivation:
+TurnNPC(GaleforceUnit)
+SOUN Somekindofwind
+STAL 40
+ASMC 0x10116A1
+ENDA
+
+HideSkills:
+DISA GoAgainUnit
+DISA GaleforceUnit
+ENDA
+
+Reset:
+//Reloads the Go Again Unit and Galeforce Unit
+CMOF
+LoadGroup(SkillUnits)
+CMON
+//Makes the "skills" NPCs again in case the player ended their turn while they were allies
+//TurnNPC(GoAgainUnit)
+//TurnNPC(GaleforceUnit)
+//Resets all the event IDs used for keeping track of character movements
+ENUF 0x14
+ENUF 0x16
+ASMC 0x1011691
+ENDA
+
+Powerup1:
+//If Trial2 is still alive, then play the powerup effect and buff his stats
+IFEF 0xF 0x10
+CALL PowerUpEffect
+ASMC 0x10115D1
+ENIF 0xF
+ENDA
+
+Powerup2:
+IFEF 0xF 0x10
+CALL PowerUpEffect
+ASMC 0x10115D1
+ENIF 0xF
+ENDA
+
+Powerup3:
+IFEF 0xF 0x10
+CALL PowerUpEffect
+ASMC 0x10115D1
+ENIF 0xF
+ENDA
+
+Powerup4:
+IFEF 0xF 0x10
+CALL PowerUpEffect
+ASMC 0x10115D1
+ENIF 0xF
+ENDA
+
+Powerup5:
+IFEF 0xF 0x10
+CALL PowerUpEffect
+ASMC 0x10115D1
+Text(0x80F) //Time to attack
+CHAI Trial2 PursueWithoutHeed
+ENIF 0xF
+ENDA
+
+PowerUpEffect:
+CameraUnit(Trial2,5)
+NoticeUnit(Trial2,5)
+SOUN Aureolalightexplosion
+STAL 100
+ENDA
+
+BallistaVsBoss:
+/*Checks if the village was visited
+If yes, then the camera goes to [7,4]*/
+IFET 0x20 0x8
+CameraLocation(7,4,10)
+//Loads a sniper and makes him go into the ballista
+LoadGroup(BallistaSniper)
+Activate(BallistaGuy,InBallista)
+STAL 20
+Move(TheBoss1,8,3)
+NoticeUnit(TheBoss1,5)
+Text(0x80B) //Is that a Ballista
+FIGH BallistaGuy TheBoss1 BossAttacked ScriptedBattle
+Reverse(BallistaGuy,GrayedOut)
+TextStart(0x80C) //Gah
+LoadGroup(NewBoss)
+TextContinue(0x808)
+SOUN Axerising
+STAL 30
+SOUN Axefalling
+STAL 30
+KILL TheBoss1
+TextEnd(0x80D) //Taking his stuff
+NoticeUnit(BallistaGuy,5)
+Text(0x80E) //Out of ammo
+DISA BallistaGuy
+ELSE 0x21
+ENIF 0x20
+//If not, then it resets the event ID
+ENUF 0x30
+ENIF 0x21
+ENDA
+
+BossAttacked:
+AttackerCritical(51,0)
+EndOfBattle
+
+ReinforcementWarning:
+//Moves the camera to [8,21]; flashes cursor on [8,24] and [9,24]
+CameraLocation(8,20,10)
+NoticeLocation(8,24,5)
+NoticeLocation(9,24,5)
+//Loads a wyvern and makes him move, causing the wyvern flying sound effect
+CMOF
+LoadGroup(WyvernSound)
+MoveGeneric(0,0,MakingSound)
+DISA [0,0]
+CMON
+CameraLocation(9,7,10)
+NoticeLocation(16,7,5)
+SOUN Brigandbattlecry
+STAL 30
+ENDA
+
+MakingSound:
+MOMA right right down down left left up up
+ALIGN 4
+
+BanditSpawn:
+CameraLocation(9,7,10)
+LoadGroup(LoneBanditReinforcement)
+ENDA
+
+WyvernsSpawn:
+CameraLocation(8,20,10)
+LoadGroup(WyvernReinforcements)
+ENDA
+
+FortWarning:
+CMOF
+CameraLocation(8,8,10)
+NoticeLocation(7,5,5)
+LoadGroup(FootStepSound)
+MoveGeneric(0,0,MakingSound)
+DISA [0,0]
+CMON
+ENDA
+
+ReinforcementsArrive:
+CameraLocation(6,19,5)
+LoadGroup(LoneWyvernReinforcement)
+STAL 10
+CameraLocation(8,8,5)
+LoadGroup(LoneFortReinforcement)
+ENDA
+
+BanditWarning:
+CameraLocation(7,4,10)
+NoticeLocation(6,0,5)
+SOUN Brigandbattlecry
+STAL 30
+ENDA
+
+BanditSpawn2:
+CameraLocation(7,4,10)
+LoadGroup(LoneBanditReinforcement2)
+ENDA
+
+PaladinWarning:
+//Moves the camera to focus on [10,11] and flashes the cursor in several spots
+CameraLocation(10,11,10)
+NoticeLocation(16,5,5)
+NoticeLocation(16,6,5)
+NoticeLocation(16,7,5)
+NoticeLocation(16,8,5)
+NoticeLocation(16,9,5)
+//Turns off the camera following unit movement
+CMOF
+LoadGroup(HorseSound)
+MoveGeneric(0,0,MakingSound)
+DISA [0,0]
+//Turns the camera back on
+CMON
+ENDA
+
+PaladinSpawn:
+CameraLocation(10,11,10)
+LoadGroup(PaladinReinforcements)
+ENDA
+
+WyrmslayerVillage:
+MUSI
+LoadBack(VillageGarden)
+Text(0x807) //Here's a Wyrmslayer
+ITGV Wyrmslayer
+MUNO
+ENDA
+
+HammerVillage:
+MUSI
+LoadBack(VillageGarden)
+Text(0x809) //Here's a hammer
+ITGV Hammer
+MUNO
+ENDA
+
+BallistaVillage:
+MUSI
+LoadBack(VillageGarden)
+Text(0x80A) //We can help you beat the boss, we'll send the Ballista out right away
+ITGV Elixir
+MUNO
+ENDA
+
+Ending_event:
+ScrollText(0x810)
+MoveToChapter(Ch3)
+ENDA
+
+TrapData:
+BLST [1,5] 0x34
+ALIGN 4
+ENDTRAP
+
+MESSAGE Events end at offset currentOffset
+//The map for this chapter is at offset: ????????

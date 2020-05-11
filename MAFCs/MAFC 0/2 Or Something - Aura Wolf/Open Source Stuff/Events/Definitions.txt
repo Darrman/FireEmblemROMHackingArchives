@@ -1,0 +1,79 @@
+#ifdef _FE7_
+
+//Intro Stuff
+#define LoadBeginningBackground(bg) "ASMC 0x7A939; ASMC 0x7A9D5; FADI 10; ASMC 0x7A95D; BACG bg; FADU 10;"
+
+//'Custom' Macros
+#define LocationText(text,coord,duration) "TEX8 text [coord,0]; STAL duration; RETB"
+#define CameraUnit(unit,duration) "CAM1 unit; STAL duration"
+#define CameraLocation(coord1,coord2,duration) "CAM1 [coord1,coord2]; STAL duration"
+#define NoticeUnit(unit,duration) "CURF unit; STAL duration; CURE"
+#define NoticeLocation(coord1,coord2,duration) "CURF [coord1,coord2]; STAL duration; CURE"
+#define LoadBack(background) "FADI 10; BACG background; FADU 10"
+#define TextStart(text) "TEX1 text"
+#define TextContinue(text) "MORETEXT text"
+#define TextEnd(text) "MORETEXT text; REMA"
+#define LoadGood "LOU1 Good; ENUN"
+#define LoadBad "LOU1 Bad; ENUN"
+#define LoadMain "LOU1 Good Bad; ENUN"
+#define LoadGroup(Units) "LOU1 Units; ENUN"
+#define LoadGroups(Units1,Units2) "LOU1 Units1 Units2; ENUN"
+#define Move(Char,X,Y) "MOVE Char [X,Y]; ENUN"
+#define Move(Char,X,Y,Speed) "MOVE Char [X,Y] Speed; ENUN"
+#define Move(Char,Move_Pointer) "MOVE Char Move_Pointer; ENUN"
+#define MoveGeneric(X1,Y1,X2,Y2) "MOVE [X1,Y1] [X2,Y2]; ENUN"
+#define MoveGeneric(X1,Y1,X2,Y2,Speed) "MOVE [X1,Y1] [X2,Y2] Speed; ENUN"
+#define MoveGeneric(X1,Y1,Move_Pointer) "MOVE [X1,Y1] Move_Pointer; ENUN"
+#define Activate(char,cond) "UNCM char cond"
+#define Reverse(char,cond) "UNCR char cond"
+
+//Characters
+#define Denmer 0x01
+#define Lavina 0x02
+#define Zain 0x04
+#define Galdor 0x05
+#define Hadvar 0x06
+#define Alexander 0x2D
+
+#define GoAgainUnit 0x08
+#define GaleforceUnit 0x09
+
+#define ChooseGal 0x0F
+#define StartGuy 0x0E
+#define Hint1Guy 0x0A
+#define Hint2Guy 0x0B
+#define Hint3Guy 0x0C
+#define Hint4Guy 0x0D
+#define BallistaGuy 0x07
+
+#define Trial1 0x46
+#define Trial2 0x48
+#define TheBoss1 0x4A
+#define TheBoss2 0x49
+
+#define HalberdFigh 0x47
+#define GenericMerc 0x52
+#define GenericArch 0x55
+#define GenericSold 0x62
+#define GenericWyvern 0x67
+#define GenericMage 0x68
+#define GenericFigh 0x69
+#define GenericCava 0x6A
+#define GenericPala 0x6B
+
+//Classes
+#define SwordCavalier 0x2E
+
+//Items
+#define IronLance 0x14
+#define SteelLance 0x16
+#define SilverLance 0x17
+#define BraveLance 0x19
+#define Horseslayer 0x1B
+#define Axereaver 0x1E
+#define Swordreaver 0x2A
+#define Worm 0x45
+#define Carreau 0x46
+#define StatBoosters "0x5A 0x5B 0x5C 0x5D 0x5E 0x5F 0x60 0x61 0x62"
+
+#endif

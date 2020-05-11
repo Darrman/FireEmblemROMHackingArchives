@@ -1,0 +1,115 @@
+//Made by markyjoe1990 of Youtube
+//Modified by Nintenlord
+
+#define DISABLE_TUTORIALS
+#include EAstdlib.event
+#include Definitions.txt
+
+EventPointerTable(0x06,Pointers)
+
+
+ORG 0xD00000
+Pointers:
+POIN Turn_events 
+POIN Character_events 
+POIN Location_events 
+POIN Misc_events
+POIN TrapData TrapData
+POIN Bad Bad Bad Bad
+POIN Good Good Good Good
+POIN Opening_event Ending_event
+
+Bad:
+UNIT
+
+Good:
+UNIT ChooseGal Civilian_2_F 0x0 Level(1,Ally,False) [8,4] [8,4] [Vulnerary] NoAI
+UNIT StartGuy EliwoodLord 0x0 Level(1,NPC,False) [8,1] [8,1] [BlueGem,Vulnerary] NoAI
+UNIT Denmer HectorLord 0x0 Level(5,NPC,False) [6,2] [6,2] [IronAxe,HandAxe,Vulnerary] NoAI
+UNIT Hint1Guy Archsage 0x0 Level(1,NPC,False) [10,1] [10,1] [Elixir] NoAI
+UNIT Hint2Guy Archsage 0x0 Level(1,NPC,False) [10,2] [10,2] [Elixir] NoAI
+UNIT Hint3Guy Archsage 0x0 Level(1,NPC,False) [10,3] [10,3] [Elixir] NoAI
+UNIT Hint4Guy Archsage 0x0 Level(1,NPC,False) [10,4] [10,4] [Elixir] NoAI
+UNIT
+
+Turn_events:
+OpeningTurnEvent(Opening_event)
+END_MAIN
+
+Character_events:
+CharacterEvent(0x0,StartGameplay,ChooseGal,StartGuy)
+CharacterEvent(0x0,GetInfo,ChooseGal,Denmer)
+CharacterEvent(0x0,Hint1,ChooseGal,Hint1Guy)
+CharacterEvent(0x0,Hint2,ChooseGal,Hint2Guy)
+CharacterEvent(0x0,Hint3,ChooseGal,Hint3Guy)
+CharacterEvent(0x0,Hint4,ChooseGal,Hint4Guy)
+END_MAIN
+
+Location_events:
+END_MAIN
+
+Misc_events:
+CauseGameOverIfLordDies
+END_MAIN
+
+Opening_event:
+//Loads a black background
+LoadBack(Black)
+TEX1 0x7FE //Press "start" now to skip the intro
+//Loads the GOOD Unit Group
+LoadGood
+//Explain which guy is for which thing
+ScrollText(0x7FF)
+REMA
+ENDA
+
+StartGameplay:
+//Makes ChooseGal a NPC; she's not part of the gameplay party
+TurnNPC(ChooseGal)
+//Plays Crowdcheering sound effect and stalls for a while
+SOUN Crowdcheeringthenstops
+STAL 25
+//Jumps to the save prompt; chapter ended
+JUMP Ending_event
+ENDA
+
+GetInfo:
+/*
+Village Contents (Wyrmslayer, Hammer, Ballistae)
+Galeforce and Go Again
+Sound Effect = Reinforcements
+Trial 2 Powerup
+*/
+ScrollText(0x800)
+ENDA
+
+Hint1:
+//Get the Wyrmslayer if you want
+ScrollText(0x801)
+ENDA
+
+Hint2:
+//Ignore the General and Hammer village
+ScrollText(0x802)
+ENDA
+
+Hint3:
+//Pace yourself
+ScrollText(0x803)
+ENDA
+
+Hint4:
+//Level up Galdor
+ScrollText(0x804)
+ENDA
+
+Ending_event:
+MoveToChapter(Ch1)
+ENDA
+
+TrapData:
+ENDTRAP
+
+
+MESSAGE Events end at offset currentOffset
+//The map for this chapter is at offset: ????????

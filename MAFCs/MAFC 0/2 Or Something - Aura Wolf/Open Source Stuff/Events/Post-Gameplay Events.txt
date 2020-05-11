@@ -1,0 +1,250 @@
+//Made by markyjoe1990 of Youtube
+//Modified by Nintenlord
+
+#define DISABLE_TUTORIALS
+#include EAstdlib.event
+#include Definitions.txt
+
+EventPointerTable(0x15,Pointers)
+
+
+ORG 0xD03000
+Pointers:
+POIN Turn_events 
+POIN Character_events 
+POIN Location_events 
+POIN Misc_events
+POIN TrapData TrapData
+POIN Bad Bad Bad Bad
+POIN Good Good Good Good
+POIN Opening_event Ending_event
+
+Bad:
+UNIT
+
+Good:
+UNIT Denmer HectorLord Denmer Level(5,Ally,False) [5,4] [5,4] [IronAxe,HandAxe,Vulnerary] NoAI
+UNIT Lavina Mage_F Denmer Level(4,Ally,False) [7,1] [7,1] [Fire,Vulnerary] NoAI
+UNIT Zain Shaman Denmer Level(6,Ally,False) [9,3] [9,3] [Carreau,Flux,Vulnerary] NoAI
+UNIT Galdor Archer Denmer Level(5,Ally,False) [8,12] [8,12] [IronBow,Longbow] NoAI
+UNIT Hadvar Paladin Denmer Level(1,Ally,False) [8,9] [8,9] [SteelLance,Javelin,Vulnerary] NoAI
+UNIT Alexander LynLord Denmer Level(5,Ally,False) [8,6] [8,6] [IronSword,Vulnerary] NoAI
+UNIT Renault Bishop Denmer Level(20,Ally,False) [0,6] [0,6] [Mend,Physic,MemberCard] NoAI
+UNIT GoAgainUnit Prince_Tactician Denmer Level(1,NPC,False) [6,3] [6,3] [0x00] Guard
+UNIT GaleforceUnit Prince_Tactician Denmer Level(1,NPC,False) [4,3] [4,3] [0x00] Guard
+UNIT
+
+Turn_events:
+OpeningTurnEvent(Opening_event)
+TurnEventPlayer(0x0,Reset,2,200)
+END_MAIN
+
+Character_events:
+END_MAIN
+
+Location_events:
+Vendor(VendorStuff,9,3)
+House(0x0,BeginInn,8,9)
+SecretShop(GoodStuff,1,12)
+END_MAIN
+
+Misc_events:
+AREA 0x0 CheckForTurnSpent [0,0] [17,11]
+AREA 0x0 CheckForTurnSpent [0,12] [0,13]
+AREA 0x0 CheckForTurnSpent [1,13] [1,13]
+AREA 0x0 CheckForTurnSpent [2,12] [17,14]
+AREA 0x0 SecretShopFound [1,12] [1,12]
+CauseGameOverIfLordDies
+END_MAIN
+
+Opening_event:
+//Loads a black background
+LoadBack(Black)
+TEX1 0x7FE //Press "start" now to skip the intro
+//Loads the GOOD Unit Group
+LoadGood
+//Go use the arena...?
+ScrollText(0x811)
+REMA
+ASMC 0x1013121
+ENDA
+
+CheckForTurnSpent:
+IFCA 0x0 0x1 Alexander
+IFEF 0x2 0x5 //If Alexander has used GoAgain, then he can't move a third time
+ENUT 0x5
+TurnAlly(GoAgainUnit)
+ENIF 0x2
+ENIF 0x1
+IFCA 0x0 0x3 Galdor
+IFEF 0x4 0x6 //If Galdor has used Galeforce, then he can't move a third time
+ENUT 0x6
+TurnAlly(GaleforceUnit)
+ENIF 0x4
+ENIF 0x3
+IFCA 0x0 0x5 GoAgainUnit
+JUMP GoAgainActivation
+ENIF 0x5
+IFCA 0x0 0x6 GaleforceUnit
+JUMP GaleforceActivation
+ENIF 0x6
+ENDA
+
+GoAgainActivation:
+TurnNPC(GoAgainUnit)
+SOUN Horsetrot
+STAL 20
+SOUN Horsetrot
+STAL 20
+ASMC 0x1011661
+ENDA
+
+GaleforceActivation:
+TurnNPC(GaleforceUnit)
+SOUN Somekindofwind
+STAL 40
+ASMC 0x10116A1
+ENDA
+
+Reset:
+//Makes the "skills" NPCs again in case the player ended their turn while they were allies
+TurnNPC(GoAgainUnit)
+TurnNPC(GaleforceUnit)
+//Resets all the event IDs used for keeping track of character movements
+ENUF 0x5
+ENUF 0x6
+ASMC 0x1011691
+ENDA
+
+VendorStuff:
+SHLI Heal Mend Recover Physic Fortify Vulnerary Elixir
+
+GoodStuff:
+SHLI StatBoosters HerosCrest KnightsCrest OrionsBolt GuidingRing
+
+BeginInn:
+MUS2 TheInn
+LoadBack(BadonInn)
+TextStart(0x812) //C'mon in
+IFET 0x11 0x9
+JUMP CheckGold
+ENIF 0x11
+IFET 0xE 0x7
+JUMP FoundIt
+ENIF 0xE
+IFEF 0x7 0x8
+JUMP FirstVisit
+ENIF 0x7
+JUMP SecondVisit
+ENDA
+
+FirstVisit:
+TextContinue(0x815) //Secret shop somewhere hint
+ENUT 0x8
+IFAT 0x8 0x1013161 //If you have less than 15000 gold
+JUMP EndInn1
+ELSE 0x9
+ENIF 0x8
+JUMP EndInn2
+ENIF 0x9
+ENDA
+
+SecondVisit:
+TextContinue(0x816) //Pay me, and I'll tell you
+IFYN 0xA
+IFAT 0x16 0x1013141 //If you have less than 5000 gold
+TextContinue(0x817) //You're funny
+JUMP EndInn1
+ENIF 0x16
+ASMC 0x10131A1 //Subtracts 5000 gold
+TextEnd(0x818)
+CameraLocation(7,9,10)
+NoticeLocation(1,12,10)
+LoadBack(BadonInn)
+TextStart(0x819)
+ELSE 0xB
+ENIF 0xA
+TextContinue(0x81A) //Alright, suit yourself
+ENIF 0xB
+IFAT 0xC 0x1013161 //If you have less than 15000 gold
+JUMP EndInn1
+ELSE 0xD
+ENIF 0xC
+JUMP EndInn2
+ENIF 0xD
+ENDA
+
+FoundIt:
+TextContinue(0x81B) //Don't tell anyone
+ENUT 0x9
+IFAT 0xF 0x1013161 //If you have less than 15000 gold
+JUMP EndInn1
+ELSE 0x10
+ENIF 0xF
+JUMP EndInn2
+ENIF 0x10
+ENDA
+
+CheckGold:
+IFAT 0x12 0x1013141 //If you have less than 5000 gold
+JUMP Comment1
+ENIF 0x12
+IFAT 0x13 0x1013161 //If you have less than 15000 gold
+JUMP Comment2
+ENIF 0x13
+IFAT 0x14 0x1013181 //If you have less than 30000 gold
+JUMP Comment3
+ENIF 0x14
+JUMP Comment4
+ENDA
+
+Comment1:
+TextContinue(0x81C) //Not doing so well
+JUMP EndInn1
+ENDA
+
+Comment2:
+TextContinue(0x81D) //Seem to be holding up
+JUMP EndInn1
+ENDA
+
+Comment3:
+TextContinue(0x81E) //Looking good
+JUMP EndInn2
+ENDA
+
+Comment4:
+TextContinue(0x81F) //Heard about your arena performance
+JUMP EndInn2
+ENDA
+
+EndInn1:
+TextEnd(0x813) //Drink's on me
+ITGV PureWater
+MURE 10
+ENDA
+
+EndInn2:
+TextEnd(0x814) //You'll have to pay for it if you want it
+IFYN 0x15
+ASMC 0x10131C1 //Subtracts 900 gold
+ITGV PureWater
+ENIF 0x15
+MURE 10
+ENDA
+
+SecretShopFound:
+ENUT 0x7
+CALL CheckForTurnSpent
+ENDA
+
+Ending_event:
+MoveToChapter(Ch11_E)
+ENDA
+
+TrapData:
+ENDTRAP
+
+
+MESSAGE Events end at offset currentOffset
+//The map for this chapter is at offset: ????????

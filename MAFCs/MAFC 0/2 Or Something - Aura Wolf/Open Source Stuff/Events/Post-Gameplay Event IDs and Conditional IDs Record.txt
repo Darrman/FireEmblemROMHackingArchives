@@ -1,0 +1,53 @@
+Any other ID not listed is not being used
+
+Event IDs
+
+Keeping Track Of What Has Happened This Turn
+0x5		Alexander has used Go Again
+0x6		Galdor has used Galeforce
+
+Area Event
+0x7		Secret Shop (probably) found
+
+Inn
+0x8		The inn has been visited once (Secret shop not found)
+0x9		The inn has been visited after finding the secret shop
+
+Other
+0x65		Game Over
+
+
+
+Conditional IDs
+
+ASM Skills
+0x1		If Alexander just moved
+0x2		If Alexander has not used Go Again
+0x3		If Galdor just moved
+0x4		If Galdor has not used Galeforce
+0x5		If GoAgainUnit just moved
+0x6		If GaleforceUnit just moved
+
+
+Inn
+0x7		If the inn hasn't been visited
+0x8		If you have less than 15000 gold
+0x9		If you have more than 15000 gold
+
+0xA		If you pay the innkeeper
+0xB		If you don't pay the innkeeper
+0xC		If you have less than 15000 gold
+0xD		If you have more than 15000 gold
+
+0xE		If the secret shop has been found
+0xF 	If you have less than 15000 gold
+0x10	If you have more than 15000 gold
+
+0x11	If you have visited the inn after the secret shop has been found
+0x12	If you have less than 5000 gold
+0x13	If you have less than 15000 gold
+0x14	If you have less than 30000 gold
+
+0x15	If you buy a Pure Water
+
+0x16	If you have less than 5000 gold
